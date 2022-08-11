@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #canvas {
+        border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="300px" height="150px"></canvas>
+</body>
+<script>
+    //canvas默认为width="300px" height="150px"
+    //获取画布
+    var canvas=document.querySelector("#canvas");
+    /*
+uerySelector()是用于接收一个CSS选择符，返回与该模式匹配的第一个元素；querySelectorAll()用于选择匹配到的所有元素。
+
+其中不同的是：
+query选择符选出来的元素及元素数组是静态的，而getElement这种方法选出的元素是动态的。
+
+query选择符,静态的，意思是指选出的所有元素的数组，不会随着文档操作而改变。
+注意：高度和宽度设置要不就在canvas标签内设置，要不就在js用   画布.width  画布.height来设置，不要用成画布.style.width或者在css里设置
+    */
+
+   //获取画笔
+   var hb=canvas.getContext("2d");
+
+   //画一个矩形
+   //hb.fillRect(100,50,50,50);//括号里的数值分别表示x轴坐标  y轴坐标   宽度  高度，fillRect填充颜色
+   //hb.strokeRect(100,50,100,100);//描边
+   //hb.clearRect(150,60,50,50);//清楚矩形
+
+
+   //定义路径起始点
+   //hb.beginPath();
+   //绘制路径
+   /*
+   hb.moveTo(50,50);
+   hb.lineTo(150,50);
+   hb.lineTo(50,100);
+   hb.lineTo(50,50);
+
+   //填充
+   hb.stroke();
+   //路径闭合点
+   hb.closePath();
+   */
+
+   //绘制圆
+   /*
+   hb.beginPath();
+
+   hb.arc(50,50,30,0,Math.PI*2,true);//圆心x 圆心y  半径  起始弧度   结束弧度（x方向）派为180   旋转方向（默认为顺时针false  true为逆时针)  
+
+   hb.fill();
+
+   hb.closePath();
+   */
+
+   //绘制文字
+   //hb.fillText("hello",100,100);
+
+   //绘制图片
+   //获取图片
+   /*
+   var img=new Image();
+   //img.src=
+   img.onload=function(){
+    hb.drawImage(img,50,50)
+   }*/
+
+
+</script>
+</html>
